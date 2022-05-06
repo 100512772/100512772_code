@@ -3,7 +3,7 @@ import socket # importing python socket module
 server = socket.socket() # creating server socket
 print('\nSocket Created') # informing user that socket has been created
 
-server.bind(('localhost', 9999)) # binding socket to localhost ip and port number 9999
+server.bind(('localhost', 1234)) # binding socket to localhost ip and port number 9999
 
 server.listen(5) # listening for connections from client
 print('Waiting for connections from the client . . .') # informing user that the server is listening for connections
