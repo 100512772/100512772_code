@@ -1,6 +1,8 @@
 This code has been developed and testing using PyCharm Community Edition 2021.3.1
 Python Version 3.10
 
+Both programs should be run using PyCharm in order for them to work together.
+
 
 Instructions: 
 - Run 'server' first 
