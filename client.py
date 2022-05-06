@@ -3,6 +3,7 @@ import random # used for random number generation
 
 client = socket.socket() # creating client socket
 
+# if OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted occurs then change Port number to 1234 or something else
 client.connect(('localhost', 9999)) # connecting socket to localhost ip and port number 9999
 
 key_length = int(input("\nPlease choose a key length (8-64): ")) # key length user input
