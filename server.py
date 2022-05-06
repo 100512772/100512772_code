@@ -3,6 +3,7 @@ import socket # importing python socket module
 server = socket.socket() # creating server socket
 print('\nSocket Created') # informing user that socket has been created
 
+# if OSError: [WinError 10048] Only one usage of each socket address (protocol/network address/port) is normally permitted occurs then change Port number to 1234 or something else
 server.bind(('localhost', 9999)) # binding socket to localhost ip and port number 9999
 
 server.listen(5) # listening for connections from client
