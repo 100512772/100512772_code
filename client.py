@@ -3,7 +3,7 @@ import random # used for random number generation
 
 client = socket.socket() # creating client socket
 
-client.connect(('localhost', 9999)) # connecting socket to localhost ip and port number 9999
+client.connect(('localhost', 1234)) # connecting socket to localhost ip and port number 9999
 
 key_length = int(input("\nPlease choose a key length (8-64): ")) # key length user input
 while key_length > 64 or key_length < 8:
@@ -32,7 +32,7 @@ split_list = []
 for word in list:
     split_list.extend(split(word))
 
-#print(split_list) # print entire random line of text file for testing
+print(split_list) # print entire random line of text file for testing
 
 counter = 0 # counter to iterate through the list elements
 auth_key = [] # creating list for final authentication key to be entered into
@@ -47,6 +47,10 @@ print("The final authentication key is: " + str(auth_key)) # making clearer to u
 
 client.send(bytes(str(auth_key), 'utf-8')) # sending authentication key to server
 
+#wrong_key = 12
+
+#client.send(bytes(str(wrong_key), 'utf-8')) # sending authentication key to server
+
 print("\nThe server replied: " + client.recv(1024).decode()) # receiving data from server
 
 print("\nThe server replied: " + client.recv(1024).decode()) # receiving data from server
@@ -54,4 +58,4 @@ print("The server replied: " + client.recv(1024).decode()) # receiving data from
 
 # sending data across once connection is authenticated
 client.send(bytes('My position is: z', 'utf-8'))
-client.send(bytes('My position is: w', 'utf-8'))
+client.send(bytes('\nMy position is: w', 'utf-8'))
