@@ -3,7 +3,7 @@ import random # used for random number generation
 
 client = socket.socket() # creating client socket
 
-client.connect(('localhost', 1234)) # connecting socket to localhost ip and port number 9999
+client.connect(('localhost', 9999)) # connecting socket to localhost ip and port number 9999
 
 key_length = int(input("\nPlease choose a key length (8-64): ")) # key length user input
 while key_length > 64 or key_length < 8:
